@@ -1,0 +1,43 @@
+:root {
+    --primary: #121f3d;
+    --white: #fff;
+    --gray: #2a324b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: var(--white);
+    background-color: var(--primary);
+    height: 100vh;
+}
+
+.nav {
+    border-bottom: 1px solid var(--gray);
+}
+
+.nav_checkbox {
+    display: none;
+}
+
+.nav_toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0 1rem;
+    right: 0;
+}
+
+.nav_toggle svg {
+    width: 1rem;
+    fill: var(--white);
+}
+
+.nav_toggle .close {
+    display: none;
+}
