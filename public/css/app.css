@@ -1,0 +1,165 @@
+:root {
+  --one: #e60965;
+  --two: #f94892;
+  --three: #ffa1c9;
+  --four: #fbe5e5;
+
+  --white: #fff;
+  --black: #000;
+  --gray: #2a324b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: var(--black);
+  background-color: var(--four);
+  /* height: 100vh; */
+}
+
+/* inicio nav responsive */
+.nav {
+  border-bottom: 1px solid var(--gray);
+}
+
+.nav_checkbox {
+  display: none;
+}
+
+.nav_toggle {
+  position: absolute;
+  cursor: pointer;
+  margin: 0 1rem;
+  right: 0;
+}
+
+.nav_toggle svg {
+  width: 1rem;
+  fill: var(--one);
+}
+
+.nav_toggle .close {
+  display: none;
+}
+
+.nav_toggle .close,
+.nav_toggle .menu {
+  margin-top: 0.3rem;
+}
+
+.nav_menu {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1rem;
+}
+
+.nav_menu li {
+  display: none;
+  list-style: none;
+  color: var(--one);
+}
+
+.nav_menu li:first-child {
+  display: block;
+  margin-right: auto;
+}
+
+.nav_menu a {
+  color: inherit;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.menu_logo {
+  height: 30px;
+}
+
+.menu_logo img {
+  height: 100%;
+}
+
+#nav_checkbox:checked ~ ul.nav_menu li {
+  display: block;
+}
+
+#nav_checkbox:checked ~ label.nav_toggle .close {
+  display: block;
+}
+
+#nav_checkbox:checked ~ label.nav_toggle .menu {
+  display: none;
+}
+
+@media only screen and (min-width: 560px) {
+  .nav_toggle {
+    display: none;
+  }
+
+  .nav_menu {
+    flex-direction: row;
+  }
+
+  .nav_menu li {
+    display: block;
+  }
+}
+/* fin nav responsive */
+
+/* incio section photography */
+.container_photography {
+  height: 600px;
+  background-color: var(--white);
+}
+
+.section_photography {
+  background-color: var(--one);
+  height: 80%;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* background:url(../img/imagen.jpg); */
+  background-size: cover;
+}
+
+.section_photography img {
+  height: 100%;
+}
+
+.section_icon {
+  height: 10%;
+}
+
+.section_icon svg {
+  width: 2rem;
+  fill: var(--black);
+}
+
+.icon_heart {
+  display: none;
+}
+
+.icon_heart_toggle {
+  position: absolute;
+  cursor: pointer;
+  margin: 1rem 0.8rem;
+}
+
+.section_comment {
+  height: 10%;
+  margin-left: 0.8rem;
+  margin-top: 0.5rem;
+  color: var(--gray);
+}
+
+#icon_heart:checked ~ label.icon_heart_toggle .svg_heart {
+  fill: var(--one);
+}
+/* fin section photography */
